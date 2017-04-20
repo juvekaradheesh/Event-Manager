@@ -16,14 +16,14 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Voltage &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<title>Events4All</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+	<meta name="description" content="Join this portal to manage all your events" />
+	<meta name="keywords" content="events, free, event portal, event manager, manage events, manager" />
+	<meta name="author" content="Adheesh Juvekar, Asutosh Padhi" />
 
   	<!-- 
-		Authors :: 
+		Created By ::
 			Adheesh Juvekar
 			Asutosh Padhi
 	-->
