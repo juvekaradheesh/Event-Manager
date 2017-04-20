@@ -28,10 +28,22 @@
 			Asutosh Padhi
 	-->
 
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
+	
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -43,14 +55,17 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+	
 	<!-- Cards -->
 	<link rel="stylesheet" href="css/cards.css">
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+
 
 	</head>
 	<body>
@@ -59,15 +74,14 @@
 		<nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
 			<div class="container">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
-					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
+					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i style="color: #262626"></i></a>
 					<a href="#"><font color="#1784fb">Events4All<font></a>
 				</div>
 				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
 					<ul data-offcanvass="yes">
-						<li class="active"><a href="#">Tour</a></li>
-						<li><a href="#" style="color: #262626">Participated</a></li>
-						<li><a href="#" style="color: #262626">Upcoming</a></li>
-						<li><a href="#" style="color: #262626">Trending</a></li>
+						<li class="active"><a href="#" style="color: #262626">Participated</a></li>
+						<li class="active"><a href="#" style="color: #262626">Upcoming</a></li>
+						<li class="active"><a href="#" style="color: #262626">Trending</a></li>
 					</ul>
 				</div> 
 				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
