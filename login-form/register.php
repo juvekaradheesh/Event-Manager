@@ -66,7 +66,9 @@ input {
 	transition: box-shadow .5s ease;
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
-
+a{
+	color:  #88a5e3;
+}
     </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -77,10 +79,12 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
   <div class="login">
 	<h1>Register</h1>
     <form method="post" action="insert_register.php">
-    	<input type="text" name="name" placeholder="Name" required="required" />
-    	<input type="email" name="username" placeholder="Username" required="required" />
+    	<input type="text" name="name" placeholder="Full Name" required="required" />
+    	<input type="email" name="username" placeholder="Email" required="required" />
         <input type="password" name="password" placeholder="Password" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Sign Up</button>
+		<br>
+		<font color="#ffffff">Already a Member? Log in <a href="index.html">here</a></font>
     </form>
 </div>
   

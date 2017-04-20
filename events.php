@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+	if(isset($_SESSION['email'])){
+		$login = true;
+		$email = $_SESSION['email'];
+	}
+	else{
+		$login = false;
+	}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -7,27 +16,18 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Voltage &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<title>Events4All</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+	<meta name="description" content="Join this portal to manage all your events" />
+	<meta name="keywords" content="events, free, event portal, event manager, manage events, manager" />
+	<meta name="author" content="Adheesh Juvekar, Asutosh Padhi" />
 
   	<!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
+		Created By ::
+			Adheesh Juvekar
+			Asutosh Padhi
 	-->
 
-  	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -66,6 +66,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+
 	</head>
 	<body>
 	
@@ -73,21 +74,30 @@
 		<nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
 			<div class="container">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
-					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
-					<a href="#" style="color: #262626">Voltage</a>
+					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i style="color: #262626"></i></a>
+					<a href="#"><font color="#1784fb">Events4All<font></a>
 				</div>
 				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
 					<ul data-offcanvass="yes">
-						<li class="active"><a href="#">Tour</a></li>
-						<li><a href="#" style="color: #262626">Explore</a></li>
-						<li><a href="#" style="color: #262626">Blog</a></li>
-						<li><a href="#" style="color: #262626">Pricing</a></li>
+						<li class="active"><a href="#" style="color: #262626">Participated</a></li>
+						<li class="active"><a href="#" style="color: #262626">Upcoming</a></li>
+						<li class="active"><a href="#" style="color: #262626">Trending</a></li>
 					</ul>
 				</div> 
 				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
 					<ul class="fh5co-special" data-offcanvass="yes">
-						<li><a href="login-form/index.html" style="color: #262626">Login</a></li>
+						<?php
+							if($login){
+						?>
 						<li><a href="login-form/register.php" class="call-to-action">Logout</a></li>
+						<?php
+							}
+							else{
+						?>
+						<li><a href="login-form/index.html" style="color: #262626">Login</a></li>
+						<?php
+							}
+						?>
 					</ul>
 				</div>
 			</div>
@@ -96,13 +106,13 @@
 		<br><br>
 		<div class="fh5co-blog-style-1">
 			<div class="container">
-				<div class="row p-b">
+				<!--<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<p class="wow fadeInUp" data-wow-duration=".1s" data-wow-delay=".1s">Awesome Events you can be part of</p>
+						<p class="wow fadeInUp" data-wow-duration=".1s" data-wow-delay=".1s">Events List</p>
 					</div>
-				</div>
+				</div>-->
 				<div class="row p-b">
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+					<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12">
 					<?php
 					include "functions/dataBaseConn.php";
 
@@ -114,7 +124,7 @@
 						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay=".5s">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>	
-								<img src="images/img_same_dimension_2.jpg" alt="Image" class="img-responsive">
+								<img class="center-block" src="images/event<?php echo $row['event_id']; ?>.png" alt="Image" class="img-responsive">
 							</div>
 							<div class="fh5co-post-text">
 								<h3><a href="#"><?php echo $row['event_name'] ?></a></h3>
