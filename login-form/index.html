@@ -66,6 +66,9 @@ input {
 	transition: box-shadow .5s ease;
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+a{
+	color:  #88a5e3;
+}
 
     </style>
 
@@ -77,9 +80,11 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
   <div class="login">
 	<h1>Login</h1>
     <form method="post" action="login-check.php">
-    	<input type="email" name="username" placeholder="Username" required="required" />
+    	<input type="email" name="username" placeholder="Email" required="required" />
         <input type="password" name="password" placeholder="Password" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+		<br>
+		<font color="#ffffff">Not a Member yet? Register <a href="register.php">here</a></font>
     </form>
 </div>
   
