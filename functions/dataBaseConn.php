@@ -3,7 +3,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$db = "hackathon";
+	$db = "event_manager";
 
 	$conn = new mysqli($servername, $username, $password, $db);
 
