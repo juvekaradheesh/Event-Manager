@@ -86,8 +86,8 @@
 				</div> 
 				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
 					<ul class="fh5co-special" data-offcanvass="yes">
-						<li><a href="#">Login</a></li>
-						<li><a href="#" class="call-to-action">Get Started</a></li>
+						<li><a href="login-form/index.html">Login</a></li>
+						<li><a href="login-form/register.php" class="call-to-action">Get Started</a></li>
 					</ul>
 				</div>
 			</div>
