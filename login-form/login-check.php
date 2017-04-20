@@ -12,13 +12,15 @@
 	{
 		if($row['email'] == $username && $row['password']==$password)
 		{
-			echo "yes";
+			session_start();
+			$_SESSION['email'] = $row['email'];
 			$flag=1;
+			header("Location:../events.php");
 		}
 	}
 	if(!$flag)
 	{
-		echo "no";
+		echo "Wrong username or password";
 	}
 
 ?>
