@@ -1,5 +1,6 @@
 <?php
-
+	
+	session_start();
 	include "../functions/dataBaseConn.php";
 	$username = $_POST['username'];
 	$password = $_POST['password'];
@@ -12,10 +13,11 @@
 	{
 		if($row['email'] == $username && $row['password']==$password)
 		{
-			session_start();
+			
 			$_SESSION['email'] = $row['email'];
 			$flag=1;
 			header("Location:../events.php");
+			exit;
 		}
 	}
 	if(!$flag)

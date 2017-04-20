@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -93,84 +93,45 @@
 			</div>
 		</nav>
 
-
+		<br><br>
 		<div class="fh5co-blog-style-1">
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Awesome Events you can participate in</p>
+						<p class="wow fadeInUp" data-wow-duration=".1s" data-wow-delay=".1s">Awesome Events you can be part of</p>
 					</div>
 				</div>
 				<div class="row p-b">
 					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.1s">
+					<?php
+					include "functions/dataBaseConn.php";
+
+					$get_event_sql = "SELECT *FROM events";
+					$get_event_result = $conn->query($get_event_sql);
+					while($row = $get_event_result->fetch_assoc())
+					{
+						?>
+						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay=".5s">
 							<div class="fh5co-post-image">
 								<div class="fh5co-overlay"></div>	
-								<div class="fh5co-category"><a href="#">Tutorial</a></div>	
 								<img src="images/img_same_dimension_2.jpg" alt="Image" class="img-responsive">
 							</div>
 							<div class="fh5co-post-text">
-								<h3><a href="#">How to Create Cards</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
+								<h3><a href="#"><?php echo $row['event_name'] ?></a></h3>
+								<p><?php echo $row['description'] ?></p><br>
+								<p><h5><a href="#"><?php include "participation-check.php" ?></a></h5></p>
 							</div>
 							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-chat"></i> 33</a>
-								<a href="#"><i class="icon-clock2"></i> 2 hours ago</a>
+								<a href="#"><i class="icon-chat"></i> <?php echo $row['filled'] ?></a>
+								<a href="#"><i class="icon-clock2"></i> <?php echo $row['date'] ?></a>
 							</div>
 						</div>
+						<?php
+					}
+					?>
+						
 					</div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.4s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>	
-								<div class="fh5co-category"><a href="#">Health</a></div>	
-								<img src="images/img_same_dimension_3.jpg" alt="Image" class="img-responsive">
-							</div>
-							<div class="fh5co-post-text">
-								<h3><a href="#">Drinking Ginger and Lemon Tea</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-chat"></i> 33</a>
-								<a href="#"><i class="icon-clock2"></i> 2 hours ago</a>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.7s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>	
-								<div class="fh5co-category"><a href="#">Tips</a></div>	
-								<img src="images/img_same_dimension_4.jpg" alt="Image" class="img-responsive">
-							</div>
-							<div class="fh5co-post-text">
-								<h3><a href="#">4 Easy Steps to Create a Soup</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-chat"></i> 33</a>
-								<a href="#"><i class="icon-clock2"></i> 2 hours ago</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.7s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>	
-								<div class="fh5co-category"><a href="#">Tips</a></div>	
-								<img src="images/img_same_dimension_4.jpg" alt="Image" class="img-responsive">
-							</div>
-							<div class="fh5co-post-text">
-								<h3><a href="#">4 Easy Steps to Create a Soup</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-chat"></i> 33</a>
-								<a href="#"><i class="icon-clock2"></i> 2 hours ago</a>
-							</div>
-						</div>
-					</div>
+					
 					<div class="clearfix visible-sm-block"></div>
 				</div>
 				<div class="row">
