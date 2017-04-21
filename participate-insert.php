@@ -24,6 +24,7 @@
 	if($insert_result = $conn->query($insert_sql))
 	{
 		echo "Thank you for Registering";
+		echo "<br><br><button type=\"button\" class=\"btn btn-danger \" onclick='loadDoc(\"cancel-participation.php?eid=".$event_id."&uid=".$user_id."\",\"btn-disp".$event_id."\")'>Cancel</button>";
 	}
 
 ?>
