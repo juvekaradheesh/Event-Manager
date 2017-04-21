@@ -18,7 +18,10 @@
 
 	#insert into participation
 	if($check_waitlist_row['capacity'] == $check_waitlist_row['filled'])
+	{
 		$insert_sql = "INSERT INTO participation VALUES('$user_id','$event_id','1')";	//1 signifies that the user is in waitlist
+		echo "You are in the waitlist since the Event is Full-House";
+	}
 	else if($check_waitlist_row['capacity'] > $check_waitlist_row['filled'])
 		$insert_sql = "INSERT INTO participation VALUES('$user_id','$event_id','0')";	//1 signifies that the user is NOT in waitlist
 	if($insert_result = $conn->query($insert_sql))
