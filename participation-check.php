@@ -20,7 +20,7 @@
 		$check_result = $conn->query($check_sql);
 		if($check_result->num_rows == 0)
 		{
-			echo "Participate";
+			echo "<button class='btn btn-primary btn-sm' onclick='loadDoc(\"participate-insert.php?eid=".$event_id."\",\"btn-disp".$event_id."\")'>Participate</button>";
 		}
 		else
 		{
