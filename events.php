@@ -89,7 +89,7 @@
 						<?php
 							if($login){
 						?>
-						<li><a href="login-form/register.php" class="call-to-action">Logout</a></li>
+						<li><a href="logout.php" class="call-to-action">Logout</a></li>
 						<?php
 							}
 							else{
