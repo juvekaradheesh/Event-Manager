@@ -65,7 +65,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	<script type="text/javascript" src="functions/ajax.js"></script>
 
 	</head>
 	<body>
@@ -129,7 +129,7 @@
 							<div class="fh5co-post-text">
 								<h3><a href="#"><?php echo $row['event_name'] ?></a></h3>
 								<p><?php echo $row['description'] ?></p><br>
-								<p><h5><a href="#"><?php include "participation-check.php" ?></a></h5></p>
+								<p><h5 id="btn-disp<?php echo $row['event_id'] ?>"><?php include "participation-check.php" ?></h5></p>
 							</div>
 							<div class="fh5co-post-meta">
 								<a href="#"><i class="icon-chat"></i> <?php echo $row['filled'] ?></a>
@@ -154,6 +154,13 @@
 		
 	</div>
 	<!-- END page-->
+
+	<script type="text/javascript">
+		function insert()
+		{
+			loadDoc("participate-insert.php","btn-disp");
+		}
+	</script>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
